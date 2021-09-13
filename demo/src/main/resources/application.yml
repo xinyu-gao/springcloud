@@ -1,0 +1,17 @@
+server:
+  port: 8304
+
+spring:
+  application:
+    name: ribbon-user
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      # 注册服务，为了避免注册失败，尽量添加多个实例
+      defaultZone: http://localhost:8201/eureka/
+
+service-url:
+  user-service: http://ribbon-service
