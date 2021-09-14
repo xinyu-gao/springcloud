@@ -1,16 +1,17 @@
-package com.yu.ribbonservice;
+package com.yu.hystrixservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
+@EnableHystrix
 @EnableDiscoveryClient
-@EnableHystrixDashboard
 @SpringBootApplication
-public class RibbonServiceApplication {
+public class HystrixServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RibbonServiceApplication.class, args);
+        SpringApplication.run(HystrixServiceApplication.class, args);
     }
+
 }

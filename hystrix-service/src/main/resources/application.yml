@@ -1,9 +1,9 @@
 server:
-  port: 8303
+  port: 8305
 
 spring:
   application:
-    name: ribbon-user
+    name: hystrix-service
 
 eureka:
   client:
@@ -16,6 +16,8 @@ eureka:
 service-url:
   user-service: http://ribbon-service
 
-hystrix:
-  dashboard:
-    proxy-stream-allow-list: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream #暴露hystrix监控端点
