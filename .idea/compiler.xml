@@ -8,29 +8,39 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="turbine-service" />
-        <module name="ribbon-service" />
         <module name="hystrix-service" />
         <module name="eureka-client" />
+        <module name="api-gateway" />
+        <module name="ribbon-service" />
+        <module name="feign-service" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="11" />
+      <module name="api-gatewaydemo" target="11" />
       <module name="demo" target="11" />
       <module name="eureka-client" target="11" />
       <module name="eureka-server" target="11" />
+      <module name="feign-service" target="11" />
       <module name="hystrix-service" target="11" />
       <module name="ribbon-service" target="11" />
       <module name="turbine-service" target="11" />
+      <module name="zuul-proxy" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="api-gatewaydemo" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="feign-service" options="-parameters" />
       <module name="hystrix-service" options="-parameters" />
       <module name="ribbon-service" options="-parameters" />
       <module name="turbine-service" options="-parameters" />
+      <module name="zuul-proxy" options="-parameters" />
     </option>
   </component>
 </project>
