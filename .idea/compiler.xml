@@ -9,7 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="turbine-service" />
         <module name="hystrix-service" />
+        <module name="config-server" />
         <module name="eureka-client" />
+        <module name="config-client" />
         <module name="api-gateway" />
         <module name="ribbon-service" />
         <module name="feign-service" />
@@ -19,6 +21,8 @@
     <bytecodeTargetLevel>
       <module name="api-gateway" target="11" />
       <module name="api-gatewaydemo" target="11" />
+      <module name="config-client" target="11" />
+      <module name="config-server" target="11" />
       <module name="demo" target="11" />
       <module name="eureka-client" target="11" />
       <module name="eureka-server" target="11" />
@@ -33,6 +37,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="api-gatewaydemo" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

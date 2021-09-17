@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: #Config\u5BA2\u6237\u7AEF\u914D\u7F6E
+      profile: dev #\u542F\u7528\u914D\u7F6E\u540E\u7F00\u540D\u79F0
+      label: dev #\u5206\u652F\u540D\u79F0
+      uri: http://localhost:8901 #\u914D\u7F6E\u4E2D\u5FC3\u5730\u5740
+      name: config #\u914D\u7F6E\u6587\u4EF6\u540D\u79F0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8201/eureka/
